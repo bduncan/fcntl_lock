@@ -71,7 +71,7 @@ class FcntlLock(object):
         return self._fcntl_flock(fcntl.F_SETLK, fcntl.F_WRLCK)
 
     def get_lock(self):
-        return self._fcntl_flock(fcntl.F_SETLK, fcntl.F_WRLCK)
+        return self._fcntl_flock(fcntl.F_GETLK, fcntl.F_WRLCK)
 
     def __enter__(self):
         self.lock()
